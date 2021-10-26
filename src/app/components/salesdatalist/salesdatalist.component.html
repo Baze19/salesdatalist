@@ -1,0 +1,29 @@
+<ngx-spinner></ngx-spinner>
+
+<span> <i class="far fa-arrow-alt-circle-left" style="font-size: large;"(click)="goHome()"> back home</i></span>
+
+<p style="text-align: center;padding-top:3rem  ;padding-bottom: 1rem; font-size: large; font-weight: bold;">Barchat Data
+    for Sales Details Over the past four yeaars</p>
+
+
+<div class="form-group ">
+    <label for="inputEmail1" class="label  col-form-label listsubheader">Region</label>
+    <div class="">
+        <select (change)="getbyRegion()" placeholder="Select Category" class="form-control" name="Region" id="name"
+            [(ngModel)]="Region" style="width: 50%; background-color: gray; color: white;padding: 0.5rem; margin: 0.3rem;">
+            <option value="">-- check sales by regions --</option>
+            <option *ngFor="let City of listingsales" [value]="City['Order ID']"> {{City["Region"]}}</option>
+        </select>
+
+
+    </div>
+</div>
+
+<div style="display: flex;flex-direction: column;flex-wrap: nowrap; overflow: auto; justify-content: center;">
+    <div style="display: block;width: 70%;">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+    </div>
+   
+</div>

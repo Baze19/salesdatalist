@@ -1,0 +1,29 @@
+<div></div>
+<ngx-spinner></ngx-spinner>
+<span> <i class="far fa-arrow-alt-circle-left" style="font-size: large;"(click)="goHome()"> back home</i></span>
+<p style="font-size: larger; text-align: center;margin: 3rem; font-weight: bold;">Overview of sales data history for the past four yeaars</p>
+<div>
+    <table>
+    
+        <tr>
+            <td>SN</td>
+            <td>Product Name</td>
+            <td>Sales</td>
+            <td>Profit</td>
+            <td>Region</td>
+            <td>Discount</td>
+        </tr>
+    
+    <tr *ngFor=" let list of listingsales; let i=index;">
+        <td>{{i}}</td>
+        <td> {{list["Product Name"]}} </td>
+        <td> {{list["Sales"]}}</td>
+        <td> {{list["Profit"]}}</td>
+        <td> {{list["Region"]}}</td>
+        <td> {{list["Discount"]}}</td>
+      
+    </tr>
+   
+</table>
+</div>
+
