@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: "bar", component: SalesdatalistComponent },
   { path: "pie", component: PiechartComponent},
   { path: "table", component: TableComponent },
-  { path: '', redirectTo: '/Home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: '**', component: PagenotfoundComponent }
 
